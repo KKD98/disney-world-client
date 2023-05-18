@@ -15,7 +15,7 @@ const PopularSection = () => {
                         <img src={popular1} alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title text-2xl text-blue-700 font-semibold">Barbie Doll</h2>
+                        <h2 className="card-title text-2xl text-blue-700 font-semibold">Disney Doll</h2>
                         <p className='text-xl text-blue-700 font-semibold'>Price: <span>$10</span></p>
                         <Rating
                             placeholderRating={5}
