@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 
 const SingleCategory = ({ category }) => {
-    const { picture_url, name, price, rating } = category;
+    const {_id , picture_url, name, price, rating } = category;
     return (
         <div className="card card-side bg-base-100 shadow-xl">
             <figure><img src={picture_url} alt="Movie" className='w-48 pl-2'/></figure>
@@ -25,7 +26,9 @@ const SingleCategory = ({ category }) => {
                 </div>
                 </div>
                 <div className="card-actions justify-end">
+                    <Link to={`/viewdetails/${_id}`}>
                     <button className="btn  bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>
