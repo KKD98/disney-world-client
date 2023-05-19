@@ -14,13 +14,13 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" placeholder="email" className="input input-bordered" />
+                                <input type="email" name='email' placeholder="email" className="input input-bordered" required/>
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" placeholder="password" className="input input-bordered" />
+                                <input type="password" placeholder="password" className="input input-bordered" required/>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">Login</button>
