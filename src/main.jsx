@@ -13,12 +13,13 @@ import ViewToyDetails from './components/ViewToyDetails/ViewToyDetails';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import MyToys from './components/MyToys/MyToys';
+import AuthProvider from './provider/AuthProvider';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage></HomePage>,
-    children:[
+    children: [
       {
         path: "/",
         element: <HomeBody></HomeBody>
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: "viewdetails/:id",
         element: <ViewToyDetails></ViewToyDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/singletoy/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/singletoy/${params.id}`)
       },
       {
         path: "mytoys",
@@ -54,6 +55,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

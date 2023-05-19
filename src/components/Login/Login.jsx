@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGoogle, FaUserAlt, FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Login = () => {
+    const [error , setError] = useState("");
+    const {signIn , handleGoogleSignIn} = useContext(AuthContext);
 
     const handleLogin = event => {
+        setError("");
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email , password)
+        console.log(email , password);
+        signIn(email , password)
+        .then(res => {
+            const user = res.user;
+            console.log(user);
+        })
+        .catch(error => {
+            console.log(error.message);
+            setError(error.message);
+        })
+    }
+
+    const handleGoogleLogin = () => {
+        setError("");
+        handleGoogleSignIn()
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 py-4">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
                         <FaUserCircle className='text-center text-6xl mx-auto text-white rounded-full bg-gradient-to-r from-cyan-500 to-blue-500'></FaUserCircle>
@@ -32,13 +50,14 @@ const Login = () => {
                                 </label>
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                             </div>
+                            <p className='text-red-600'>{error ? error : ''}</p>
                             <div className="form-control mt-6">
                                 <input type="submit" value="Sign Up" className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none" />
                             </div>
                         </form>
                         <div className="divider">Or sign In With</div>
                         <div className='mx-auto'>
-                            <button className='btn bg-white border-none hover:bg-white'>
+                            <button onClick={handleGoogleLogin} className='btn bg-white border-none hover:bg-white'>
                                 <FaGoogle className='text-4xl mx-auto text-white bg-blue-600 border-2 border-blue-600 p-1 rounded-full'></FaGoogle>
                             </button>
                         </div>

@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGoogle, FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Register = () => {
+    const [error , setError] = useState("");
+    const {createUser , handleGoogleSignIn , updateUser} = useContext(AuthContext);
 
     const handleRegister = event => {
+        setError("");
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -12,7 +16,30 @@ const Register = () => {
         const photoUrl = form.photoUrl.value;
         const password = form.password.value;
 
-        console.log(email , password , photoUrl , password)
+        console.log(name , email , password , photoUrl , password);
+
+        if(password < 6){
+            return setError("Password length nust be more than six characters");
+        }
+
+        createUser(email , password)
+        .then(res => {
+            const user = res.user;
+            console.log(user);
+            updateUser(name , photoUrl)
+            .then(data => console.log(data))
+            .catch(error => console.log(error))
+        })
+        .catch(error => {
+            console.log(error.message);
+            setError(error.message);
+        })
+
+    }
+
+    const handleGoogleLogin = () => {
+        setError("");
+        handleGoogleSignIn()
     }
 
     return (
@@ -48,6 +75,7 @@ const Register = () => {
                             </label>
                             <input type="password" name='password' placeholder="password" className="input input-bordered" required/>
                         </div>
+                        <p className='text-red-500'>{error ? error : ''}</p>
                         <div className="form-control mt-6">
                             <input type="submit" value="Sign Up" className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none"/>
                         </div>
@@ -55,7 +83,7 @@ const Register = () => {
 
                         <div className="divider">Or sign In With</div>
                         <div className='mx-auto'>
-                            <button className='btn bg-white border-none hover:bg-white'>
+                            <button onClick={handleGoogleLogin} className='btn bg-white border-none hover:bg-white'>
                                 <FaGoogle className='text-4xl mx-auto text-white bg-blue-600 border-2 border-blue-600 p-1 rounded-full'></FaGoogle>
                             </button>
                         </div>
