@@ -10,6 +10,8 @@ import HomeBody from './components/HomeBody/HomeBody';
 import AllToys from './components/AllToys/AllToys';
 import AddAToy from './components/AddAToy/AddAToy';
 import ViewToyDetails from './components/ViewToyDetails/ViewToyDetails';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
         path: "viewdetails/:id",
         element: <ViewToyDetails></ViewToyDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/singletoy/${params.id}`)
+      },
+      {
+        path: "login",
+        element: <Login></Login>
+      },
+      {
+        path: "register",
+        element: <Register></Register>
       }
     ]
   },

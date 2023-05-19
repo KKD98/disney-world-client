@@ -5,7 +5,6 @@ import { useLoaderData } from 'react-router-dom';
 
 const ViewToyDetails = () => {
     const toy = useLoaderData();
-    console.log(toy);
     const { _id, picture_url, name, price, quantity, rating, sellerName, sellerEmail, description } = toy;
     return (
         <div>

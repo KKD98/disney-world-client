@@ -73,7 +73,9 @@ const Header = () => {
             </div>
 
             <div className="navbar-end">
+                <Link to="/login">
                 <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">Login</button>
+                </Link>
             </div>
         </div>
     );
