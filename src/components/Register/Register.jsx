@@ -3,6 +3,18 @@ import { FaGoogle, FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+
+    const handleRegister = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const photoUrl = form.photoUrl.value;
+        const password = form.password.value;
+
+        console.log(email , password , photoUrl , password)
+    }
+
     return (
         <div className='my-4'>
             <div className="hero min-h-screen bg-base-200 py-3">
@@ -10,6 +22,8 @@ const Register = () => {
                     <div className="card-body">
                         <FaUserCircle className='text-center text-6xl mx-auto text-white rounded-full bg-gradient-to-r from-cyan-500 to-blue-500'></FaUserCircle>
                         <h1 className='text-center font-bold text-2xl mb-3'>Please Sign Up</h1>
+
+                        <form onSubmit={handleRegister}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -35,13 +49,17 @@ const Register = () => {
                             <input type="password" name='password' placeholder="password" className="input input-bordered" required/>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">Sign Up</button>
+                            <input type="submit" value="Sign Up" className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none"/>
                         </div>
-                        <div className="divider">OR</div>
-                        <div>
-                            <FaGoogle className='text-4xl mx-auto text-white bg-blue-600 border-2 border-blue-600 p-1 rounded-full'></FaGoogle>
+                        </form>
+
+                        <div className="divider">Or sign In With</div>
+                        <div className='mx-auto'>
+                            <button className='btn bg-white border-none hover:bg-white'>
+                                <FaGoogle className='text-4xl mx-auto text-white bg-blue-600 border-2 border-blue-600 p-1 rounded-full'></FaGoogle>
+                            </button>
                         </div>
-                        <h1 className='text-md font-semibold'>Already have an account? <span className='text-blue-600'> <Link to="/login">Please Sign In</Link> </span></h1>
+                        <h1 className='text-md font-semibold'>Already have an account? <span className='text-blue-600'> <Link to="/login">Please Login</Link> </span></h1>
                     </div>
                 </div>
             </div>

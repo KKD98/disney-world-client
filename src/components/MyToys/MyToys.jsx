@@ -8,7 +8,7 @@ const MyToys = () => {
                 <table className="table w-full">
                     {/* head */}
                     <thead>
-                        <tr>
+                        <tr className='text-center'>
                             <th>Toy Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
@@ -20,13 +20,15 @@ const MyToys = () => {
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                        <tr>
+                        <tr className='text-center'>
                             <td>Cy Ganderton</td>
                             <td>Quality Control Specialist</td>
                             <td>Blue</td>
                             <td>Blue</td>
                             <td><button className="btn btn-outline btn-info">Update</button></td>
-                            <td><FaTrashAlt className='text-2xl text-sky-600'></FaTrashAlt></td>
+                            <td><button className="btn btn-circle btn-outline border-sky-600 hover:bg-sky-500 ">
+                            <FaTrashAlt className='text-2xl text-sky-600 hover:text-black'></FaTrashAlt>
+                            </button></td>
                         </tr>
                     </tbody>
                 </table>

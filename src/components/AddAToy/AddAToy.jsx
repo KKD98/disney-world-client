@@ -31,7 +31,7 @@ const AddAToy = () => {
         <div className='my-8 w-full'>
           <h1 className='text-2xl text-center font-semibold text-sky-600 mb-4 py-2'>Fill the form to Add A Toy</h1>
             <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
-                <Form onSubmit={handleSubmitForm} className="card-body w-full">
+                <form onSubmit={handleSubmitForm} className="card-body w-full">
                     <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                         <div className="form-control">
                             <label className="label">
@@ -83,7 +83,7 @@ const AddAToy = () => {
                             <input type="text" name='description' placeholder="Description" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
-                            <select className="selected w-full max-w-xs mt-8 ml-1" name='category' required>
+                            <select className="selected w-full max-w-xs mt-8 ml-1 p-3 border-2 border-gray-300 rounded-2xl" name='category' required>
                                 <option disabled selected>Select your category</option>
                                 <option value="disneyprincess">disneyprincess</option>
                                 <option value="lego">lego</option>
@@ -92,9 +92,9 @@ const AddAToy = () => {
                         </div>
                     </div>
                     <div className="form-control w-[30%] mx-auto mt-6">
-                        <button type='submit' className="btn btn-primary">Submit</button>
+                        <input type='submit' value="Submit" className="btn btn-primary"/>
                     </div>
-                </Form>
+                </form>
             </div>
         </div>
     );
