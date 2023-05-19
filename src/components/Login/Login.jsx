@@ -1,11 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { FaGoogle, FaUserAlt, FaUserCircle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 
 const Login = () => {
     const [error , setError] = useState("");
     const {signIn , handleGoogleSignIn} = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = event => {
         setError("");
@@ -14,11 +18,10 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email , password);
         signIn(email , password)
         .then(res => {
             const user = res.user;
-            console.log(user);
+            navigate(from , {replace: true});
         })
         .catch(error => {
             console.log(error.message);
@@ -28,7 +31,8 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
         setError("");
-        handleGoogleSignIn()
+        handleGoogleSignIn();
+        navigate(from , {replace: true});
     }
     return (
         <div>

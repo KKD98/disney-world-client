@@ -14,6 +14,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import MyToys from './components/MyToys/MyToys';
 import AuthProvider from './provider/AuthProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -30,16 +31,16 @@ const router = createBrowserRouter([
       },
       {
         path: "addatoy",
-        element: <AddAToy></AddAToy>
+        element: <PrivateRoute><AddAToy></AddAToy></PrivateRoute>
       },
       {
         path: "viewdetails/:id",
-        element: <ViewToyDetails></ViewToyDetails>,
+        element: <PrivateRoute><ViewToyDetails></ViewToyDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/singletoy/${params.id}`)
       },
       {
         path: "mytoys",
-        element: <MyToys></MyToys>
+        element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
       },
       {
         path: "login",

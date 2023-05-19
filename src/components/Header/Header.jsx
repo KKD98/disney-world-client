@@ -8,7 +8,6 @@ const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
-    console.log(user)
     const userName = user?.displayName ? user.displayName : '';
     const userPicture = user?.photoURL ? user.photoURL : '';
 
@@ -41,16 +40,25 @@ const Header = () => {
                                 color: isActive && "blue"
                             };
                         }}>All Toys</NavLink>
+
+                       {
+                        user && 
                         <NavLink to="/mytoys" className='text-xl text-sky-600 font-semibold hover:text-sky-800' style={({ isActive }) => {
                             return {
                                 color: isActive && "blue"
                             };
                         }}>My Toys</NavLink>
+                       }
+
+                       {
+                        user && 
                         <NavLink to="/addatoy" className='text-xl text-sky-600 font-semibold hover:text-sky-800' style={({ isActive }) => {
                             return {
                                 color: isActive && "blue"
                             };
                         }}>Add a Toy</NavLink>
+                       }
+
                         <NavLink to="/blogs" className='text-xl text-sky-600 font-semibold hover:text-sky-800' style={({ isActive }) => {
                             return {
                                 color: isActive && "blue"
@@ -70,16 +78,25 @@ const Header = () => {
                         color: isActive && "blue"
                     };
                 }}>All Toys</NavLink>
-                <NavLink to="/mytoys" className='text-xl text-sky-600 font-semibold hover:text-sky-800' style={({ isActive }) => {
+
+                {
+                    user && 
+                    <NavLink to="/mytoys" className='text-xl text-sky-600 font-semibold hover:text-sky-800' style={({ isActive }) => {
                     return {
                         color: isActive && "blue"
                     };
                 }}>My Toys</NavLink>
-                <NavLink to="/addatoy" className='text-xl text-sky-600 font-semibold hover:text-sky-800' style={({ isActive }) => {
+                }
+
+                {
+                    user && 
+                    <NavLink to="/addatoy" className='text-xl text-sky-600 font-semibold hover:text-sky-800' style={({ isActive }) => {
                     return {
                         color: isActive && "blue"
                     };
                 }}>Add a Toy</NavLink>
+                }
+
                 <NavLink to="/blogs" className='text-xl text-sky-600 font-semibold hover:text-sky-800' style={({ isActive }) => {
                     return {
                         color: isActive && "blue"

@@ -1,11 +1,16 @@
 import React, { useContext, useState } from 'react';
 import { FaGoogle, FaUserCircle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 
 const Register = () => {
     const [error , setError] = useState("");
     const {createUser , handleGoogleSignIn , updateUser} = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
 
     const handleRegister = event => {
         setError("");
@@ -16,7 +21,6 @@ const Register = () => {
         const photoUrl = form.photoUrl.value;
         const password = form.password.value;
 
-        console.log(name , email , password , photoUrl , password);
 
         if(password < 6){
             return setError("Password length nust be more than six characters");
@@ -29,6 +33,7 @@ const Register = () => {
             updateUser(name , photoUrl)
             .then(data => console.log(data))
             .catch(error => console.log(error))
+            navigate('/login')
         })
         .catch(error => {
             console.log(error.message);
@@ -39,7 +44,8 @@ const Register = () => {
 
     const handleGoogleLogin = () => {
         setError("");
-        handleGoogleSignIn()
+        handleGoogleSignIn();
+        navigate(from , {replace: true});
     }
 
     return (
