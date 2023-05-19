@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import logotext from '../../assets/logotext.png'
 import { AuthContext } from '../../provider/AuthProvider';
+import { Tooltip } from 'react-tooltip';
 const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
@@ -87,10 +88,11 @@ const Header = () => {
             </div>
 
             <div className="navbar-end">
+            <Tooltip  id="my-tooltip"></Tooltip>
                 {
                     userPicture &&
                     <div className="avatar mr-3">
-                        <div className="w-12 rounded-full">
+                        <div className="w-12 rounded-full" data-tooltip-id='my-tooltip' data-tooltip-content={userName}>
                             <img src={userPicture}/>
                         </div>
                     </div>
