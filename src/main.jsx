@@ -8,6 +8,7 @@ import {
 import HomePage from './components/HomePage/HomePage.jsx';
 import HomeBody from './components/HomeBody/HomeBody';
 import AllToys from './components/AllToys/AllToys';
+import AddAToy from './components/AddAToy/AddAToy';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "alltoys",
         element: <AllToys></AllToys>
+      },
+      {
+        path: "addatoy",
+        element: <AddAToy></AddAToy>
       }
     ]
   },
