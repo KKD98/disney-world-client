@@ -9,8 +9,8 @@ const PopularSection = () => {
     return (
         <div className='my-4'>
             <h1 className='text-4xl text-center font-semibold text-sky-600 mb-4 py-2'>Popular In Disney World</h1>
-            <div className='flex flex-col lg:flex-row justify-between gap-3'>
-                <div className="card w-full bg-base-100 shadow-xl">
+            <div className='flex flex-col lg:flex-row justify-between items-center gap-5 w-[80%] mx-auto'>
+                <div className="card w-[70%] h-[80%] bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                         <img src={popular1} alt="Shoes" className="rounded-xl" />
                     </figure>
@@ -28,7 +28,7 @@ const PopularSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-full bg-base-100 shadow-xl">
+                <div className="card w-[70%] h-[80%] bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                         <img src={popular2} alt="Shoes" className="rounded-xl mb-12" />
                     </figure>
@@ -46,7 +46,7 @@ const PopularSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-full bg-base-100 shadow-xl">
+                <div className="card w-[70%] h-[80%] bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                         <img src={popular3} alt="Shoes" className="rounded-xl mb-6" />
                     </figure>
