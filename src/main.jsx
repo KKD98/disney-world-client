@@ -16,6 +16,7 @@ import MyToys from './components/MyToys/MyToys';
 import AuthProvider from './provider/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import UpdateMyToys from './components/UpdateMyToys/UpdateMyToys';
+import Blogs from './components/Blogs/Blogs';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
         path: "updatemytoy/:id",
         element: <UpdateMyToys></UpdateMyToys>,
         loader: ({ params }) => fetch(`http://localhost:5000/singletoy/${params.id}`)
+      },
+      {
+        path: "blogs",
+        element: <Blogs></Blogs>
       }
     ]
   },

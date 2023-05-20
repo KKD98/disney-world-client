@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import AllToysRow from '../AllToysRow/AllToysRow';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
+  useTitle('AllToys');
   const [allToys, setAllToys] = useState([]);
 
   useEffect(() => {
@@ -21,6 +23,10 @@ const AllToys = () => {
   }
   return (
     <div className='my-6'>
+    <div className='flex gap-2 my-3 justify-center'>
+        <input type="text" placeholder="Type here" className="input input-bordered input-info w-full max-w-xs" />
+        <button className="btn btn-outline btn-info">Search</button>
+        </div>
       <div className="overflow-x-auto">
         <table className="table table-compact w-full">
           {/* head */}

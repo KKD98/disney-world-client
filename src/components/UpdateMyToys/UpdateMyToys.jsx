@@ -1,9 +1,10 @@
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const UpdateMyToys = () => {
-
+    useTitle('UpdateToy');
     const navigate = useNavigate();
     const toy = useLoaderData();
     const {_id , price , quantity , description} = toy;

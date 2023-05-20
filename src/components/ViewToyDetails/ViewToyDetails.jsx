@@ -2,8 +2,10 @@ import React from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ViewToyDetails = () => {
+    useTitle('ToyDetails');
     const toy = useLoaderData();
     const { _id, picture_url, name, price, quantity, rating, sellerName, sellerEmail, description } = toy;
     return (

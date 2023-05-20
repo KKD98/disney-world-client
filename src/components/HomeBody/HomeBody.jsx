@@ -4,8 +4,10 @@ import GallerySection from '../GallerySection/GallerySection';
 import PopularSection from '../PopularSection/PopularSection';
 import AllCategory from '../AllCategory/AllCategory';
 import SalesSection from '../SalesSection/SalesSection';
+import useTitle from '../../hooks/useTitle';
 
 const HomeBody = () => {
+    useTitle('Home');
     return (
         <div>
             <Banner></Banner>

@@ -3,8 +3,10 @@ import { FaTrashAlt } from 'react-icons/fa';
 import { AuthContext } from '../../provider/AuthProvider';
 import MyToysRow from '../MyToysRow/MyToysRow';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
+    useTitle('MyToys');
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
     const { email } = user;
@@ -56,6 +58,7 @@ const MyToys = () => {
     return (
         <div className='my-4 py-4'>
         <div className='my-6 flex justify-end'>
+        
         <button onClick={handleSort} className="btn btn-outline btn-info">Sort by price</button>
       </div>
             <div className="overflow-x-auto">

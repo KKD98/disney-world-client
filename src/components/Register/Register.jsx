@@ -2,8 +2,10 @@ import React, { useContext, useState } from 'react';
 import { FaGoogle, FaUserCircle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
+    useTitle('SignUp');
     const [error , setError] = useState("");
     const {createUser , handleGoogleSignIn , updateUser} = useContext(AuthContext);
 
