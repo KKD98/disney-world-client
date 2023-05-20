@@ -9,13 +9,13 @@ const Blogs = () => {
             <div className="card w-full bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title">What is an access token and refresh token? How do they work and where should we store them on the client-side?</h2>
-                    <p>Ans: </p>
+                    <p>Ans: Access Token and Refresh Token: Tokens used for authentication and authorization. Access token grants short-term access, refresh token enables long-term access. Store securely on the client-side using methods like HTTP-only cookies or secure local storage.</p>
                 </div>
             </div>
             <div className="card w-full bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title">Compare SQL and NoSQL databases?</h2>
-                    <p>Ans: </p>
+                    <p>Ans: SQL vs. NoSQL: SQL databases have fixed schemas, use structured queries, and are ideal for complex relationships. NoSQL databases provide flexibility, scalability, and schema-less data storage.</p>
                 </div>
             </div>
             <div className="card w-full bg-base-100 shadow-xl">
@@ -28,7 +28,7 @@ const Blogs = () => {
             <div className="card w-full bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title">What is MongoDB aggregate and how does it work?</h2>
-                    <p>Ans: </p>
+                    <p>Ans: MongoDB Aggregate: A pipeline-based framework for advanced querying and data manipulation in MongoDB, allowing for complex data processing and analysis.</p>
                 </div>
             </div>
         </div>
