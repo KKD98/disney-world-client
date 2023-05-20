@@ -5,12 +5,20 @@ const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/alltoys')
+    fetch('http://localhost:5000/toyswithlimit')
       .then(res => res.json())
       .then(data => {
         setAllToys(data)
       })
   }, [])
+
+  const showAllToys = () => {
+      fetch('http://localhost:5000/alltoys')
+        .then(res => res.json())
+        .then(data => {
+          setAllToys(data)
+        })
+  }
   return (
     <div className='my-6'>
       <div className="overflow-x-auto">
@@ -34,7 +42,7 @@ const AllToys = () => {
         </table>
       </div>
       <div className='my-6 flex justify-center'>
-        <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">Show All Toys</button>
+        <button onClick={showAllToys} className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">Show All Toys</button>
       </div>
     </div>
   );
