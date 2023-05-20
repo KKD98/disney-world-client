@@ -22,7 +22,7 @@ const UpdateMyToys = () => {
         console.log(updatedToyDetails)
 
         // send update data to server
-        fetch(`http://localhost:5000/toysupdate/${_id}` , {
+        fetch(`https://toy-marketplace-server-peach.vercel.app/toysupdate/${_id}` , {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

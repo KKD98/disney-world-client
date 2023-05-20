@@ -12,13 +12,13 @@ const MyToys = () => {
     const { email } = user;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toysbyemail/${email}/2`)
+        fetch(`https://toy-marketplace-server-peach.vercel.app/toysbyemail/${email}/2`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [])
 
     const handleSort = () => {
-        fetch(`http://localhost:5000/toysbyemail/${email}/1`)
+        fetch(`https://toy-marketplace-server-peach.vercel.app/toysbyemail/${email}/1`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }
@@ -35,7 +35,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/deletetoy/${_id}`, {
+                fetch(`https://toy-marketplace-server-peach.vercel.app/deletetoy/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

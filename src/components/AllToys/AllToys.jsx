@@ -10,7 +10,7 @@ const AllToys = () => {
   console.log(searchText)
 
   useEffect(() => {
-    fetch('http://localhost:5000/toyswithlimit')
+    fetch('https://toy-marketplace-server-peach.vercel.app/toyswithlimit')
       .then(res => res.json())
       .then(data => {
         setAllToys(data)
@@ -18,13 +18,13 @@ const AllToys = () => {
   }, [])
 
  const handleSearch = () => {
-  fetch(`http://localhost:5000/searchbytoyname/${searchText}`)
+  fetch(`https://toy-marketplace-server-peach.vercel.app/searchbytoyname/${searchText}`)
   .then(res => res.json())
   .then(data => setAllToys(data))
  }
 
   const showAllToys = () => {
-      fetch('http://localhost:5000/alltoys')
+      fetch('https://toy-marketplace-server-peach.vercel.app/alltoys')
         .then(res => res.json())
         .then(data => {
           setAllToys(data)

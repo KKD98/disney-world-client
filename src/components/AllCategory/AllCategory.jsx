@@ -8,7 +8,7 @@ const AllCategory = () => {
     const [categoryName , setCategoryName] = useState("disneyprincess");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toysbycategory/${categoryName}`)
+        fetch(`https://toy-marketplace-server-peach.vercel.app/toysbycategory/${categoryName}`)
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [categoryName])
