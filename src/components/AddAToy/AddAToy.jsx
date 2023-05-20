@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -7,6 +9,8 @@ import { AuthContext } from '../../provider/AuthProvider';
 const AddAToy = () => {
     const {user} = useContext(AuthContext);
     console.log(user);
+
+    const navigate = useNavigate();
 
     const {displayName , email} = user;
 
@@ -37,7 +41,18 @@ const AddAToy = () => {
             body: JSON.stringify(toyDetails)
         })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Toy added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Okay'
+                  })
+                  navigate('/mytoys');
+            }
+        })
         
     }
     return (

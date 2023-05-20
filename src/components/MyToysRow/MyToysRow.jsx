@@ -2,9 +2,9 @@ import React from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+
 const MyToysRow = ({ toy , handleDelete }) => {
     const { _id, name, picture_url, price, quantity, description } = toy;
-
    
     return (
 

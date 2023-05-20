@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
 import { AuthContext } from '../../provider/AuthProvider';
 import MyToysRow from '../MyToysRow/MyToysRow';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -16,16 +17,33 @@ const MyToys = () => {
 
     const handleDelete = (_id) => {
         console.log(_id);
-        fetch(`http://localhost:5000/deletetoy/${_id}` , {
-            method: "DELETE"
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.deletedCount > 0){
-                const remainingToy = myToys.filter(toy => toy._id !== _id)
-                ;
-                setMyToys(remainingToy);
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/deletetoy/${_id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your toy has been deleted.',
+                                'success'
+                            )
+                            const remainingToy = myToys.filter(toy => toy._id !== _id);
+                            setMyToys(remainingToy);
+                        }
+                    })
+               
             }
         })
     }
@@ -59,3 +77,4 @@ const MyToys = () => {
 };
 
 export default MyToys;
+

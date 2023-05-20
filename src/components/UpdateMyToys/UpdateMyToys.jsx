@@ -1,8 +1,10 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const UpdateMyToys = () => {
 
+    const navigate = useNavigate();
     const toy = useLoaderData();
     const {_id , price , quantity , description} = toy;
 
@@ -28,7 +30,16 @@ const UpdateMyToys = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data);
+            if(data.modifiedCount > 0){
+                Swal.fire({
+                    icon: 'Success!',
+                    text: 'Toy Updated Successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Okay'
+                  })
+                  navigate('/mytoys');
+            }
         })
        
         
@@ -64,7 +75,7 @@ const UpdateMyToys = () => {
                        
                     </div>
                     <div className="form-control w-[30%] mx-auto mt-6">
-                        <input type='submit' value="Submit" className="btn btn-primary"/>
+                        <input type='submit' value="Update" className="btn btn-primary"/>
                     </div>
                 </form>
             </div>
