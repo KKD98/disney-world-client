@@ -5,6 +5,9 @@ import useTitle from '../../hooks/useTitle';
 const AllToys = () => {
   useTitle('AllToys');
   const [allToys, setAllToys] = useState([]);
+  const [searchText , setSearchText] = useState("");
+
+  console.log(searchText)
 
   useEffect(() => {
     fetch('http://localhost:5000/toyswithlimit')
@@ -13,6 +16,12 @@ const AllToys = () => {
         setAllToys(data)
       })
   }, [])
+
+ const handleSearch = () => {
+  fetch(`http://localhost:5000/searchbytoyname/${searchText}`)
+  .then(res => res.json())
+  .then(data => setAllToys(data))
+ }
 
   const showAllToys = () => {
       fetch('http://localhost:5000/alltoys')
@@ -24,8 +33,8 @@ const AllToys = () => {
   return (
     <div className='my-6'>
     <div className='flex gap-2 my-3 justify-center'>
-        <input type="text" placeholder="Type here" className="input input-bordered input-info w-full max-w-xs" />
-        <button className="btn btn-outline btn-info">Search</button>
+        <input onChange={(e) => setSearchText(e.target.value)}  type="text" placeholder="Type here" className="input input-bordered input-info w-full max-w-xs" />
+        <button onClick={handleSearch} className="btn btn-outline btn-info">Search</button>
         </div>
       <div className="overflow-x-auto">
         <table className="table table-compact w-full">
