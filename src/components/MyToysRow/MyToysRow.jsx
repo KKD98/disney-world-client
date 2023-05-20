@@ -2,8 +2,10 @@ import React from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const MyToysRow = ({ toy }) => {
+const MyToysRow = ({ toy , handleDelete }) => {
     const { _id, name, picture_url, price, quantity, description } = toy;
+
+   
     return (
 
         <tr className='text-center'>
@@ -17,7 +19,7 @@ const MyToysRow = ({ toy }) => {
                     <button className="btn btn-outline btn-info">Update</button>
                 </Link>
             </td>
-            <td><button className="btn btn-circle btn-outline border-sky-600 hover:bg-sky-500 ">
+            <td><button onClick={() => handleDelete(_id)} className="btn btn-circle btn-outline border-sky-600 hover:bg-sky-500 ">
                 <FaTrashAlt className='text-2xl text-sky-600 hover:text-black'></FaTrashAlt>
             </button></td>
         </tr>

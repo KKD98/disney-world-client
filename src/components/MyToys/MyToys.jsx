@@ -13,6 +13,22 @@ const MyToys = () => {
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [])
+
+    const handleDelete = (_id) => {
+        console.log(_id);
+        fetch(`http://localhost:5000/deletetoy/${_id}` , {
+            method: "DELETE"
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.deletedCount > 0){
+                const remainingToy = myToys.filter(toy => toy._id !== _id)
+                ;
+                setMyToys(remainingToy);
+            }
+        })
+    }
     return (
         <div className='my-4 py-4'>
             <div className="overflow-x-auto">
@@ -32,11 +48,11 @@ const MyToys = () => {
                     </thead>
                     <tbody>
                         {
-                            myToys.map(toy => <MyToysRow key={toy._id} toy={toy}></MyToysRow>)
+                            myToys.map(toy => <MyToysRow key={toy._id} toy={toy} handleDelete={handleDelete}></MyToysRow>)
                         }
                     </tbody>
                 </table>
-                
+
             </div>
         </div>
     );

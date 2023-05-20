@@ -1,7 +1,14 @@
-import React from 'react';
-import { Form } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../provider/AuthProvider';
+
+
+
 
 const AddAToy = () => {
+    const {user} = useContext(AuthContext);
+    console.log(user);
+
+    const {displayName , email} = user;
 
     const handleSubmitForm = event => {
         event.preventDefault();
@@ -43,13 +50,13 @@ const AddAToy = () => {
                             <label className="label">
                                 <span className="label-text">Seller Email</span>
                             </label>
-                            <input type="email" name='sellerEmail' placeholder="Seller Email" className="input input-bordered" required />
+                            <input type="email" defaultValue={email} name='sellerEmail' placeholder="Seller Email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Seller Name</span>
                             </label>
-                            <input type="text" name='sellerName' placeholder="Seller Name" className="input input-bordered" required/>
+                            <input type="text" defaultValue={displayName} name='sellerName' placeholder="Seller Name" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
