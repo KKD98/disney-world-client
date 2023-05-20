@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
+import { AuthContext } from '../../provider/AuthProvider';
+import MyToysRow from '../MyToysRow/MyToysRow';
 
 const MyToys = () => {
+    const { user } = useContext(AuthContext);
+    const [myToys, setMyToys] = useState([]);
+    const { email } = user;
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/toysbyemail/${email}`)
+            .then(res => res.json())
+            .then(data => setMyToys(data))
+    }, [])
     return (
         <div className='my-4 py-4'>
             <div className="overflow-x-auto">
@@ -9,6 +20,7 @@ const MyToys = () => {
                     {/* head */}
                     <thead>
                         <tr className='text-center'>
+                            <th>Toy Picture</th>
                             <th>Toy Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
@@ -19,19 +31,12 @@ const MyToys = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
-                        <tr className='text-center'>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>Blue</td>
-                            <td>Blue</td>
-                            <td><button className="btn btn-outline btn-info">Update</button></td>
-                            <td><button className="btn btn-circle btn-outline border-sky-600 hover:bg-sky-500 ">
-                            <FaTrashAlt className='text-2xl text-sky-600 hover:text-black'></FaTrashAlt>
-                            </button></td>
-                        </tr>
+                        {
+                            myToys.map(toy => <MyToysRow key={toy._id} toy={toy}></MyToysRow>)
+                        }
                     </tbody>
                 </table>
+                
             </div>
         </div>
     );

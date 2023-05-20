@@ -10,7 +10,7 @@ const SingleCategory = ({ category }) => {
             <figure><img src={picture_url} alt="Movie" className='w-48 pl-2'/></figure>
             <div className="card-body">
                 <h2 className="card-title text-2xl font-semibold">{name}</h2>
-                <p className=' text-xl font-semibold'>Price: {price}</p>
+                <p className=' text-xl font-semibold'>Price: ${price}</p>
                 <div>
 
                 </div>

@@ -15,7 +15,7 @@ const ViewToyDetails = () => {
                         <h1 className="text-xl font-bold">Toy Name: {name}</h1>
                         <h1 className="text-xl font-bold">Seller Name: {sellerName ? sellerName : 'test'}</h1>
                         <h1 className="text-xl font-bold">Seller Email: {sellerEmail ? sellerEmail : 'test@test.com'}</h1>
-                        <h1 className="text-xl font-bold">Price: {price}</h1>
+                        <h1 className="text-xl font-bold">Price: ${price}</h1>
                         <h1 className="text-xl font-bold">Quantity: {quantity ? quantity : 1}</h1>
                         <div className='flex items-center w-full lg:w-full'>
                             <p className=' text-xl font-bold'>Rating:</p>
