@@ -10,10 +10,16 @@ const MyToys = () => {
     const { email } = user;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toysbyemail/${email}`)
+        fetch(`http://localhost:5000/toysbyemail/${email}/2`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [])
+
+    const handleSort = () => {
+        fetch(`http://localhost:5000/toysbyemail/${email}/1`)
+            .then(res => res.json())
+            .then(data => setMyToys(data))
+    }
 
     const handleDelete = (_id) => {
         console.log(_id);
@@ -49,6 +55,9 @@ const MyToys = () => {
     }
     return (
         <div className='my-4 py-4'>
+        <div className='my-6 flex justify-end'>
+        <button onClick={handleSort} className="btn btn-outline btn-info">Sort by price</button>
+      </div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     {/* head */}
