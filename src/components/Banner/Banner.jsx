@@ -12,16 +12,16 @@ const Banner = () => {
                     <div className="hero-content flex-col lg:flex-row-reverse justify-between">
                         <img src={banner1} className="w-full lg:w-[50%]  lg:p-5" />
                         <div className='pl-8'>
-                            <h1 className="text-5xl font-bold text-sky-700">Doll</h1>
-                            <p className="py-6 text-sky-700 font-semibold">Explore limitless opportunities with these dolls that open up a world <br /> of endless possibilities.</p>
-                            <button className="btn bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-none ">Show More</button>
+                            <h1 className="text-4xl font-bold text-black">Doll</h1>
+                            <p className="py-6 text-black font-semibold">Explore limitless opportunities with these dolls that open up a world <br /> of endless possibilities.</p>
+                            <button className="btn btn-md bg-pink-400 text-white hover:bg-gray-200 hover:text-pink-400 border-none">Show More</button>
                         </div>
                     </div>
                 </div>
 
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" className="btn btn-circle bg-sky-500 border-none text-white text-2xl hover:bg-blue-600">❮</a>
-                    <a href="#slide2" className="btn btn-circle bg-sky-500 border-none text-white text-2xl hover:bg-blue-600">❯</a>
+                    <a href="#slide3" className="btn btn-circle bg-white border-none text-gray-400 text-2xl hover:bg-white hover:text-pink-400">❮</a>
+                    <a href="#slide2" className="btn btn-circle bg-white border-none text-gray-400 text-2xl hover:bg-white hover:text-pink-400">❯</a>
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full">
@@ -29,15 +29,15 @@ const Banner = () => {
                     <div className="hero-content flex-col lg:flex-row-reverse justify-between">
                         <img src={banner2} className="w-full lg:w-[50%]  lg:p-5" />
                         <div className='pl-8'>
-                            <h1 className="text-5xl font-bold text-sky-700">Lego</h1>
-                            <p className="py-6 text-sky-700 font-semibold">Spark creativity and endless fun with building playsets and more to inspire imaginations.</p>
-                            <button className="btn bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-none">Show More</button>
+                            <h1 className="text-4xl font-bold text-black">Lego</h1>
+                            <p className="py-6 text-black font-semibold">Spark creativity and endless fun with building playsets and more to inspire imaginations.</p>
+                            <button className="btn btn-md bg-pink-400 text-white hover:bg-white hover:text-pink-400 border-none">Show More</button>
                         </div>
                     </div>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle bg-sky-500 border-none text-white text-2xl hover:bg-blue-600">❮</a>
-                    <a href="#slide3" className="btn btn-circle bg-sky-500 border-none text-white text-2xl hover:bg-blue-600">❯</a>
+                    <a href="#slide1" className="btn btn-circle bg-white border-none text-gray-400 text-2xl hover:bg-white hover:text-pink-400">❮</a>
+                    <a href="#slide3" className="btn btn-circle bg-white border-none text-gray-400 text-2xl hover:bg-white hover:text-pink-400">❯</a>
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full">
@@ -45,15 +45,15 @@ const Banner = () => {
                     <div className="hero-content flex-col lg:flex-row-reverse justify-between">
                         <img src={banner3} className="w-full lg:w-[50%]  lg:p-5" />
                         <div className='pl-8'>
-                            <h1 className="text-5xl font-bold text-sky-700">Action Figure</h1>
-                            <p className="py-6 text-sky-700 font-semibold">Prepare for an exciting experience with these thrilling and captivating choices that spark your sense of adventure.</p>
+                            <h1 className="text-4xl font-bold text-black">Action Figure</h1>
+                            <p className="py-6 text-black font-semibold">Prepare for an exciting experience with these thrilling and captivating choices that spark your sense of adventure.</p>
                             <button className="btn bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-none">Show More</button>
                         </div>
                     </div>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle bg-sky-500 border-none text-white text-2xl hover:bg-blue-600">❮</a>
-                    <a href="#slide1" className="btn btn-circle bg-sky-500 border-none text-white text-2xl hover:bg-blue-600">❯</a>
+                    <a href="#slide2" className="btn btn-circle bg-white border-none text-gray-400 text-2xl hover:bg-white hover:text-pink-400">❮</a>
+                    <a href="#slide1" className="btn btn-circle bg-white border-none text-gray-400 text-2xl hover:bg-white hover:text-pink-400">❯</a>
                 </div>
             </div>
         </div>
