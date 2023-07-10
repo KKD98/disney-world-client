@@ -9,53 +9,40 @@ import g7 from '../../assets/g7.jpg';
 import g8 from '../../assets/g8.jpg';
 
 const GallerySection = () => {
-    return (
-        <div className='mb-5'>
-        <h1 className='text-4xl text-center font-semibold text-sky-600 mb-4 py-2'>Disney Gallery</h1>
-        <div className='mb-3 mx-auto grid grid-cols-2 lg:grid-cols-4 lg:ml-8 gap-3'>
-            <div className="card lg:w-72  bg-gradient-to-r from-cyan-200 to-blue-400 rounded-none shadow-xl">
-                <figure className="px-5 py-5 my-auto">
-                    <img src={g1} alt="Shoes" className="rounded-xl h-80 lg:h-96 hover:scale-125 transition-all duration-500 cursor-pointer" />
-                </figure>
-            </div>
-            <div className="card lg:w-72  bg-gradient-to-r from-cyan-200 to-blue-400 rounded-none shadow-xl">
-                <figure className="px-5 py-5 my-auto">
-                    <img src={g2} alt="Shoes" className="rounded-xl h-80 lg:h-96  hover:scale-125 transition-all duration-100 cursor-pointer" />
-                </figure>
-            </div>
-            <div className="card lg:w-72 bg-gradient-to-r from-cyan-200 to-blue-400 rounded-none shadow-xl">
-                <figure className="px-5 py-5">
-                    <img src={g3} alt="Shoes" className="rounded-xl h-80 lg:h-96  hover:scale-125 transition-all duration-500 cursor-pointer" />
-                </figure>
-            </div>
-            <div className="card lg:w-72 bg-gradient-to-r from-cyan-200 to-blue-400 rounded-none shadow-xl">
-                <figure className="px-5 py-5">
-                    <img src={g4} alt="Shoes" className="rounded-xl h-80 lg:h-96  hover:scale-125 transition-all duration-500 cursor-pointer" />
-                </figure>
-            </div>
-            <div className="card lg:w-72 bg-gradient-to-r from-cyan-200 to-blue-400 rounded-none shadow-xl">
-                <figure className="px-5 py-5">
-                    <img src={g5} alt="Shoes" className="rounded-xl h-80 lg:h-96  hover:scale-125 transition-all duration-500 cursor-pointer" />
-                </figure>
-            </div>
-            <div className="card lg:w-72 bg-gradient-to-r from-cyan-200 to-blue-400 rounded-none shadow-xl">
-                <figure className="px-5 py-5">
-                    <img src={g6} alt="Shoes" className="rounded-xl h-80 lg:h-96  hover:scale-125 transition-all duration-500 cursor-pointer" />
-                </figure>
-            </div>
-            <div className="card lg:w-72 bg-gradient-to-r from-cyan-200 to-blue-400 rounded-none shadow-xl">
-                <figure className="px-5 py-5">
-                    <img src={g7} alt="Shoes" className="rounded-xl h-80 lg:h-96  hover:scale-125 transition-all duration-500 cursor-pointer" />
-                </figure>
-            </div>
-            <div className="card lg:w-72 bg-gradient-to-r from-cyan-200 to-blue-400 rounded-none shadow-xl">
-                <figure className="px-5 py-5">
-                    <img src={g8} alt="Shoes" className="rounded-xl h-80 lg:h-96  hover:scale-125 transition-all duration-500 cursor-pointer" />
-                </figure>
-            </div>
+  return (
+    <div className='mb-5'>
+      <p className='text-pink-400 text-center text-4xl'>--------------------</p>
+      <h1 className='text-4xl text-center font-semibold text-black'>Disney Gallery</h1>
+      <p className='text-pink-400 text-center text-4xl'>--------------------</p>
+
+      <div className='grid grid-cols-2 lg:grid-cols-4  w-full lg:w-4/5 mx-auto p-2 lg:p-0'>
+        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-pink-400 duration-300'>
+          <img src={g1} alt='' className='w-full h-full object-cover' />
         </div>
+        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-pink-400 duration-300'>
+          <img src={g2} alt='' className='w-full h-full object-cover' />
         </div>
-    );
+        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-pink-400 duration-300'>
+          <img src={g3} alt='' className='w-full h-full object-cover' />
+        </div>
+        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-pink-400 duration-300'>
+          <img src={g4} alt='' className='w-full h-full object-cover' />
+        </div>
+        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-pink-400 duration-300'>
+          <img src={g5} alt='' className='w-full h-full object-cover' />
+        </div>
+        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-pink-400 duration-300'>
+          <img src={g6} alt='' className='w-full h-full object-cover' />
+        </div>
+        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-pink-400 duration-300'>
+          <img src={g7} alt='' className='w-full h-full object-cover' />
+        </div>
+        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-pink-400 duration-300'>
+          <img src={g8} alt='' className='w-full h-full object-cover' />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default GallerySection;

@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <div className="navbar bg-white">
             <div className="navbar-start">
-                <p className='text-2xl font-serif text-pink-400'>Disney World</p>
+                <p className='text-3xl font-mono font-semibold text-pink-400'>Disney World</p>
             </div>
             <div className="navbar-center lg:hidden">
                 <div className="dropdown ">
