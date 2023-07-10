@@ -33,8 +33,8 @@ const AllToys = () => {
   return (
     <div className='my-6'>
     <div className='flex gap-2 my-3 justify-center'>
-        <input onChange={(e) => setSearchText(e.target.value)}  type="text" placeholder="Type here" className="input input-bordered input-info w-full max-w-xs" />
-        <button onClick={handleSearch} className="btn btn-outline btn-info">Search</button>
+        <input onChange={(e) => setSearchText(e.target.value)}  type="text" placeholder="Type here" className="input w-full  border-2 border-sky-400 max-w-xs" />
+        <button onClick={handleSearch} className="btn btn-outline border-2 border-sky-400 hover:bg-sky-400 hover:text-white hover:border-sky-400">Search</button>
         </div>
       <div className="overflow-x-auto">
         <table className="table table-compact w-full">
@@ -57,7 +57,7 @@ const AllToys = () => {
         </table>
       </div>
       <div className='my-6 flex justify-center'>
-        <button onClick={showAllToys} className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">Show All Toys</button>
+        <button onClick={showAllToys} className="btn btn-md bg-sky-400 text-white hover:bg-white hover:text-sky-400 border-none">Show All Toys</button>
       </div>
     </div>
   );

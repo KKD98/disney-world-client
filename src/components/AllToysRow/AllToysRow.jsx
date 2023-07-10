@@ -29,7 +29,7 @@ const AllToysRow = ({toy}) => {
         <td className='font-semibold'>{toy.quantity ? toy.quantity : 1}</td>
         <td>
         <Link to={`/viewdetails/${_id}`}>
-                    <button onClick={handleAlert} className="btn  bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">View Details</button>
+                    <button onClick={handleAlert} className="btn btn-outline border-2 border-sky-400 hover:bg-sky-400 hover:text-white hover:border-sky-400">View Details</button>
                     </Link>
         </td>
       </tr>

@@ -37,13 +37,13 @@ const SingleCategory = ({ category }) => {
                 </div>
             </div>
             <img src={picture_url} alt="toypic" className='w-[250px] h-[250px] p-3' />
-            <div className="flex flex-col justify-start items-start bg-pink-400 w-full p-3">
+            <div className="flex flex-col justify-start items-start bg-sky-400 w-full p-3">
 
                 <p className='mb-1 text-xl font-semibold'>${price}</p>
 
                 <div >
                     <Link to={`/viewdetails/${_id}`}>
-                        <button onClick={handleAlert} className="btn p-0 hover:p-0 bg-pink-400 text-white border-none hover:bg-pink-400  hover:text-black">View Details</button>
+                        <button onClick={handleAlert} className="btn p-0 hover:p-0 bg-sky-400 text-white border-none hover:bg-sky-400  hover:text-black">View Details</button>
                     </Link>
                 </div>
             </div>

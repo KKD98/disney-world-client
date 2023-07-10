@@ -4,10 +4,9 @@ import logo from '../../assets/logo.png'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-gradient-to-r from-cyan-200 to-blue-400 text-base-content">
+            <footer className="footer p-10 bg-white text-black border-t-2 border-gray-200">
                 <div className='flex flex-col items-center'>
-                    <img src={logo} className='w-[30%]' />
-                    <p className='text-2xl text-blue-700 font-semibold'>Disney World</p>
+                    <p className='text-4xl text-sky-400 font-mono font-semibold'>Disney World</p>
                 </div>
                 <div>
                     <span className="footer-title">Company</span>
@@ -29,7 +28,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <div className="footer footer-center p-4 bg-gradient-to-r from-cyan-200 to-blue-400 text-base-content">
+            <div className="footer footer-center p-4 bg-white text-black">
                 <div>
                     <p>Copyright © 2023 - All right reserved by Disney World Ltd</p>
                 </div>

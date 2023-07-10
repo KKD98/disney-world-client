@@ -8,59 +8,79 @@ import Rating from 'react-rating';
 const PopularSection = () => {
     return (
         <div className='my-4'>
-            <h1 className='text-4xl text-center font-semibold text-sky-600 mb-4 py-2'>Popular In Disney World</h1>
-            <div className='flex flex-col lg:flex-row justify-between items-center gap-5 w-[80%] mx-auto'>
-                <div className="card w-[70%] h-[80%] bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src={popular1} alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title text-2xl text-blue-700 font-semibold">Disney Doll</h2>
-                        <p className='text-xl text-blue-700 font-semibold'>Price: <span>$10</span></p>
-                        <Rating
-                            placeholderRating={5}
-                            emptySymbol= {<FaRegStar className='text-2xl text-yellow-600'></FaRegStar>}
-                            placeholderSymbol={ <FaStar className='text-2xl text-yellow-600'></FaStar> }
-                            fullSymbol= {<FaStar className='text-2xl text-yellow-600'></FaStar>}
-                        />
-                        <div className="card-actions">
-                            <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">Buy Now</button>
+            <p className='text-sky-400 text-center text-4xl'>--------------------</p>
+            <h1 className='text-3xl text-center font-semibold text-black font-mono'>Popular Items </h1>
+            <p className='text-sky-400 text-center text-4xl'>--------------------</p>
+
+            <div className=' grid grid-cols-1 lg:grid-cols-3 gap-4 w-full lg:w-4/5 mx-auto my-5'>
+                <div className="flex flex-col gap-2 w-[80%] mx-auto lg:w-full justify-center items-center border-2 border-gray-100 shadow-xl shadow-black">
+
+                    <div className='flex flex-col justify-center items-center w-full py-3 px-2'>
+                        <h2 className="text-xl font-mono font-semibold mb-2">Disney Doll</h2>
+                        <div>
+                            <Rating
+                                placeholderRating={4.9}
+                                emptySymbol={<FaRegStar className='text-xl text-yellow-600'></FaRegStar>}
+                                placeholderSymbol={<FaStar className='text-xl text-yellow-600'></FaStar>}
+                                fullSymbol={<FaStar className='text-xl text-yellow-600'></FaStar>}
+                            />
+                        </div>
+                    </div>
+                    <img src={popular1} alt="toypic" className='w-[250px] h-[250px] p-3' />
+                    <div className="flex flex-col justify-start items-start bg-sky-400 w-full p-3">
+
+                        <p className='mb-1 text-xl font-semibold'>$10</p>
+
+                        <div >
+                            <button className="btn p-0 hover:p-0 bg-sky-400 text-white border-none hover:bg-sky-400  hover:text-black">View More</button>
                         </div>
                     </div>
                 </div>
-                <div className="card w-[70%] h-[80%] bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src={popular2} alt="Shoes" className="rounded-xl mb-12" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title  text-2xl text-blue-700 font-semibold">Spider Man</h2>
-                        <p className='text-xl text-blue-700 font-semibold'>Price: <span>$8</span></p>
-                        <Rating
-                            placeholderRating={4.7}
-                            emptySymbol= {<FaRegStar className='text-2xl text-yellow-600'></FaRegStar>}
-                            placeholderSymbol={ <FaStar className='text-2xl text-yellow-600'></FaStar> }
-                            fullSymbol= {<FaStar className='text-2xl text-yellow-600'></FaStar>}
-                        />
-                        <div className="card-actions">
-                            <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">Buy Now</button>
+
+                <div className="flex flex-col gap-2 w-[80%] mx-auto lg:w-full justify-center items-center shadow-xl shadow-black">
+
+                    <div className='flex flex-col justify-center items-center border-2 border-gray-100 w-full py-3 px-2'>
+                        <h2 className="text-xl font-mono font-semibold mb-2">Spider Man</h2>
+                        <div>
+                            <Rating
+                                placeholderRating={4.8}
+                                emptySymbol={<FaRegStar className='text-xl text-yellow-600'></FaRegStar>}
+                                placeholderSymbol={<FaStar className='text-xl text-yellow-600'></FaStar>}
+                                fullSymbol={<FaStar className='text-xl text-yellow-600'></FaStar>}
+                            />
+                        </div>
+                    </div>
+                    <img src={popular2} alt="toypic" className='w-[250px] h-[250px] p-3' />
+                    <div className="flex flex-col justify-start items-start bg-sky-400 w-full p-3">
+
+                        <p className='mb-1 text-xl font-semibold'>$9</p>
+
+                        <div >
+                            <button className="btn p-0 hover:p-0 bg-sky-400 text-white border-none hover:bg-sky-400  hover:text-black">View More</button>
                         </div>
                     </div>
                 </div>
-                <div className="card w-[70%] h-[80%] bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src={popular3} alt="Shoes" className="rounded-xl mb-6" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title  text-2xl text-blue-700 font-semibold">Yoda</h2>
-                        <p className='text-xl text-blue-700 font-semibold'>Price: <span>$11</span></p>
-                        <Rating
-                            placeholderRating={4.9}
-                            emptySymbol= {<FaRegStar className='text-2xl text-yellow-600'></FaRegStar>}
-                            placeholderSymbol={ <FaStar className='text-2xl text-yellow-600'></FaStar> }
-                            fullSymbol= {<FaStar className='text-2xl text-yellow-600'></FaStar>}
-                        />
-                        <div className="card-actions">
-                            <button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none">Buy Now</button>
+
+                <div className="flex flex-col gap-2 w-[80%] mx-auto lg:w-full justify-center items-center shadow-xl shadow-black">
+
+                    <div className='flex flex-col justify-center items-center border-2 border-gray-100 w-full py-3 px-2'>
+                        <h2 className="text-xl font-mono font-semibold mb-2">Yoda</h2>
+                        <div>
+                            <Rating
+                                placeholderRating={4.9}
+                                emptySymbol={<FaRegStar className='text-xl text-yellow-600'></FaRegStar>}
+                                placeholderSymbol={<FaStar className='text-xl text-yellow-600'></FaStar>}
+                                fullSymbol={<FaStar className='text-xl text-yellow-600'></FaStar>}
+                            />
+                        </div>
+                    </div>
+                    <img src={popular3} alt="toypic" className='w-[250px] h-[250px] p-3' />
+                    <div className="flex flex-col justify-start items-start bg-sky-400 w-full p-3">
+
+                        <p className='mb-1 text-xl font-semibold'>$11</p>
+
+                        <div >
+                            <button className="btn p-0 hover:p-0 bg-sky-400 text-white border-none hover:bg-sky-400  hover:text-black">View More</button>
                         </div>
                     </div>
                 </div>

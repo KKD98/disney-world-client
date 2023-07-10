@@ -18,15 +18,15 @@ const AllCategory = () => {
     }
     return (
         <div className='mt-4 mb-6'>
-        <p className='text-pink-400 text-center text-4xl'>--------------------</p>
+        <p className='text-sky-400 text-center text-4xl'>--------------------</p>
       <h1 className='text-3xl text-center font-semibold text-black font-mono'>Shop By Category </h1>
-      <p className='text-pink-400 text-center text-4xl'>--------------------</p>
+      <p className='text-sky-400 text-center text-4xl'>--------------------</p>
     
             <Tabs>
             <TabList className="flex justify-center gap-2 mb-6">
-                <Tab onClick={() => handleCategory("disneyprincess")} className="p-4 text-xl border-2 border-pink-400 font-semibold bg-pink-400 text-white font-mono">Disney Princess</Tab>
-                <Tab onClick={() => handleCategory("lego")} className="p-4 text-xl border-2 border-pink-400 font-semibold bg-pink-400 text-white font-mono">Lego</Tab>
-                <Tab onClick={() => handleCategory("actionfigure")} className="p-4 text-xl border-2 border-pink-400 font-semibold bg-pink-400 text-white font-mono">Action Figure</Tab>
+                <Tab onClick={() => handleCategory("disneyprincess")} className="p-4 text-xl border-2 border-sky-400 font-semibold bg-sky-400 text-white font-mono">Disney Princess</Tab>
+                <Tab onClick={() => handleCategory("lego")} className="p-4 text-xl border-2 border-sky-400 font-semibold bg-sky-400 text-white font-mono">Lego</Tab>
+                <Tab onClick={() => handleCategory("actionfigure")} className="p-4 text-xl border-2 border-sky-400 font-semibold bg-sky-400 text-white font-mono">Action Figure</Tab>
             </TabList>
 
             <TabPanel>
@@ -37,14 +37,14 @@ const AllCategory = () => {
                 </div>
             </TabPanel>
             <TabPanel>
-            <div className='lg:mx-2 grid grid-cols-1 lg:grid-cols-2 gap-4'>
+            <div className='lg:mx-2 grid grid-cols-1 lg:grid-cols-3 gap-4 w-full lg:w-4/5 mx-auto'>
                     {
                         categories.map(category => <SingleCategory key={category._id} category={category}></SingleCategory>)
                     }
                 </div>
             </TabPanel>
             <TabPanel>
-            <div className='lg:mx-2 grid grid-cols-1 lg:grid-cols-2 gap-4'>
+            <div className='lg:mx-2 grid grid-cols-1 lg:grid-cols-3 gap-4 w-full lg:w-4/5 mx-auto'>
                     {
                         categories.map(category => <SingleCategory key={category._id} category={category}></SingleCategory>)
                     }
