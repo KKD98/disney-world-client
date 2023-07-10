@@ -13,9 +13,9 @@ const PopularSection = () => {
             <p className='text-sky-400 text-center text-4xl'>--------------------</p>
 
             <div className=' grid grid-cols-1 lg:grid-cols-3 gap-4 w-full lg:w-4/5 mx-auto my-5'>
-                <div className="flex flex-col gap-2 w-[80%] mx-auto lg:w-full justify-center items-center border-2 border-gray-100 shadow-xl shadow-black">
+                <div className="flex flex-col gap-2 w-[80%] mx-auto lg:w-full justify-center items-center shadow-xl shadow-black">
 
-                    <div className='flex flex-col justify-center items-center w-full py-3 px-2'>
+                    <div className='flex flex-col justify-center items-center w-full border-2 border-gray-100 py-3 px-2'>
                         <h2 className="text-xl font-mono font-semibold mb-2">Disney Doll</h2>
                         <div>
                             <Rating

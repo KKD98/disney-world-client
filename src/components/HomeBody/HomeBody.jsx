@@ -6,6 +6,7 @@ import AllCategory from '../AllCategory/AllCategory';
 import SalesSection from '../SalesSection/SalesSection';
 import useTitle from '../../hooks/useTitle';
 import Review from '../Review/Review';
+import ToyPartners from '../ToyPartners/ToyPartners';
 
 const HomeBody = () => {
     useTitle('Home');
@@ -15,6 +16,7 @@ const HomeBody = () => {
             <GallerySection></GallerySection>
             <AllCategory></AllCategory>
             <SalesSection></SalesSection>
+            <ToyPartners></ToyPartners>
             <PopularSection></PopularSection>
             <Review></Review>
         </div>

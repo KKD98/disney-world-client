@@ -15,29 +15,29 @@ const GallerySection = () => {
       <h1 className='text-3xl text-center font-semibold text-black font-mono'>Disney Gallery</h1>
       <p className='text-sky-400 text-center text-4xl'>--------------------</p>
 
-      <div className='grid grid-cols-2 lg:grid-cols-4  w-full lg:w-4/5 mx-auto p-2 lg:p-0'>
-        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-sky-400 duration-300'>
+      <div className='grid grid-cols-2 lg:grid-cols-4  w-full lg:w-4/5 mx-auto p-2'>
+        <div className='p-6 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300'>
           <img src={g1} alt='' className='w-full h-full object-cover' />
         </div>
-        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-sky-400 duration-300'>
+        <div className='p-6 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300'>
           <img src={g2} alt='' className='w-full h-full object-cover' />
         </div>
-        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-sky-400 duration-300'>
+        <div className='p-6 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300'>
           <img src={g3} alt='' className='w-full h-full object-cover' />
         </div>
-        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-sky-400 duration-300'>
+        <div className='p-6 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300'>
           <img src={g4} alt='' className='w-full h-full object-cover' />
         </div>
-        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-sky-400 duration-300'>
+        <div className='p-6 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300'>
           <img src={g5} alt='' className='w-full h-full object-cover' />
         </div>
-        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-sky-400 duration-300'>
+        <div className='p-6 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300'>
           <img src={g6} alt='' className='w-full h-full object-cover' />
         </div>
-        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-sky-400 duration-300'>
+        <div className='p-6 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300'>
           <img src={g7} alt='' className='w-full h-full object-cover' />
         </div>
-        <div className='p-2 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-sky-400 duration-300'>
+        <div className='p-6 w-full h-[300px] lg:h-[350px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300'>
           <img src={g8} alt='' className='w-full h-full object-cover' />
         </div>
       </div>
