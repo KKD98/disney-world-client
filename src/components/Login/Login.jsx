@@ -58,16 +58,16 @@ const Login = () => {
                             </div>
                             <p className='text-red-600'>{error ? error : ''}</p>
                             <div className="form-control mt-6">
-                                <input type="submit" value="Sign Up" className="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-none" />
+                                <input type="submit" value="Sign Up" className="btn bg-sky-400 text-white border-none" />
                             </div>
                         </form>
                         <div className="divider">Or sign In With</div>
                         <div className='mx-auto'>
                             <button onClick={handleGoogleLogin} className='btn bg-white border-none hover:bg-white'>
-                                <FaGoogle className='text-4xl mx-auto text-white bg-blue-600 border-2 border-blue-600 p-1 rounded-full'></FaGoogle>
+                                <FaGoogle className='text-4xl mx-auto text-white bg-sky-400 border-2 border-sky-400 p-1 rounded-full'></FaGoogle>
                             </button>
                         </div>
-                        <h1 className='text-md font-semibold'>Don't have an account? <span className='text-blue-600'> <Link to="/register">Please Sign Up</Link> </span></h1>
+                        <h1 className='text-md font-semibold'>Don't have an account? <span className='text-sky-400'> <Link to="/register">Please Sign Up</Link> </span></h1>
                     </div>
                 </div>
             </div>

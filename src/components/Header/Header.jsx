@@ -63,7 +63,7 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
-            <div className='navbar-center hidden lg:block lg:flex lg:justify-between  lg:w-[20%]'>
+            <div className='navbar-center hidden lg:flex lg:gap-3 lg:mx-auto lg:justify-center lg:w-[35%]'>
                 <NavLink to="/" className='text-xl text-black hover:text- sky-400 font-semibold' style={({ isActive }) => {
                     return {
                         color: isActive && "#00BFFF"
