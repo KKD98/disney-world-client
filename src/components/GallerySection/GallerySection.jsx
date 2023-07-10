@@ -12,7 +12,7 @@ const GallerySection = () => {
   return (
     <div className='mb-5'>
       <p className='text-pink-400 text-center text-4xl'>--------------------</p>
-      <h1 className='text-4xl text-center font-semibold text-black'>Disney Gallery</h1>
+      <h1 className='text-3xl text-center font-semibold text-black font-mono'>Disney Gallery</h1>
       <p className='text-pink-400 text-center text-4xl'>--------------------</p>
 
       <div className='grid grid-cols-2 lg:grid-cols-4  w-full lg:w-4/5 mx-auto p-2 lg:p-0'>
